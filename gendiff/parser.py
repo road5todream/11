@@ -1,7 +1,19 @@
 import json
 from os.path import splitext
 
+
 EXTENSIONS = ('yaml', 'yml', 'json')
+
+
+def normalize_values(file):
+    corr_values = {None: 'null', True: 'true', False: 'false'}
+
+    for key, val in file.items():
+        if isinstance(val, dict):
+            normalize_values(val)
+        elif isinstance(val, (bool, type(None))):
+            file[key] = corr_values[val]
+    return file
 
 
 def prepare_data(path_file: str):
@@ -13,7 +25,8 @@ def prepare_data(path_file: str):
 
 
 def dict_to_str(dictionary):
-    string = ['{']
+    string = [  ]
+    string.append('{')
     dict_keys = dictionary.keys()
     for key in dict_keys:
         sim = str(key) + ' ' + str(dictionary[key])
@@ -50,14 +63,14 @@ def sort(dicts):
     dict_keys_2 = sorted(dict_2.keys())
     for key in dict_keys_1:
         if key in dict_keys_2 and dict_1[key] == dict_2[key]:
-            diff['   ' + key + ':'] = dict_1[key]
+            diff['    ' + key + ':'] = dict_1[key]
         else:
-            diff[' - ' + key + ':'] = dict_1[key]
+            diff['  - ' + key + ':'] = dict_1[key]
     for key in dict_keys_2:
         if key in dict_keys_1 and dict_1[key] != dict_2[key]:
-            diff[' + ' + key + ':'] = dict_2[key]
+            diff['  + ' + key + ':'] = dict_2[key]
         if key not in dict_keys_1:
-            diff[' + ' + key + ':'] = dict_2[key]
+            diff['  + ' + key + ':'] = dict_2[key]
     return diff
 
 
@@ -72,4 +85,5 @@ def generate_diff(path_file1, path_file2):
     parc_data1 = parse(data1, format1)
     parc_data2 = parse(data2, format2)
     diff = sort(compare(parc_data1, parc_data2))
+    diff = normalize_values(diff)
     return dict_to_str(diff)
