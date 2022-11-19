@@ -17,6 +17,12 @@ import pytest
             'correct.txt',
             id="flat_json_file"
         ),
+        pytest.param(
+            'file1.yaml',
+            'file2.yaml',
+            'correct.txt',
+            id="flat_yaml_file"
+        ),
     ]
 )
 def test_gen_diff(file1, file2, expected):

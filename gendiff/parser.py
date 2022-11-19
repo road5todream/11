@@ -1,4 +1,5 @@
 import json
+import yaml
 from os.path import splitext
 
 
@@ -25,8 +26,7 @@ def prepare_data(path_file: str):
 
 
 def dict_to_str(dictionary):
-    string = [  ]
-    string.append('{')
+    string = ['{']
     dict_keys = dictionary.keys()
     for key in dict_keys:
         sim = str(key) + ' ' + str(dictionary[key])
@@ -77,6 +77,8 @@ def sort(dicts):
 def parse(data, forma):
     if forma == 'json':
         return json.loads(data)
+    if forma in ('yml', 'yaml'):
+        return yaml.safe_load(data)
 
 
 def generate_diff(path_file1, path_file2):
