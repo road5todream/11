@@ -1,7 +1,4 @@
-from gendiff.parser import generate_diff
-from gendiff.parser import prepare_data
-from gendiff.parser import parse
-from gendiff.parser import normalize_values
+from gendiff.generate import generate_diff
 from tests import get_path
 import json
 from os.path import splitext
@@ -14,13 +11,25 @@ import pytest
         pytest.param(
             'file1.json',
             'file2.json',
-            'correct.txt',
+            'correct1.txt',
             id="flat_json_file"
         ),
         pytest.param(
             'file1.yaml',
             'file2.yaml',
-            'correct.txt',
+            'correct1.txt',
+            id="flat_yaml_file"
+        ),
+        pytest.param(
+            'file3.json',
+            'file4.json',
+            'correct2.txt',
+            id="flat_json_file"
+        ),
+        pytest.param(
+            'file3.yaml',
+            'file4.yaml',
+            'correct2.txt',
             id="flat_yaml_file"
         ),
     ]

@@ -11,7 +11,7 @@ def parse_cli_args():
                         default='stylish', type=str)
 
     args = parser.parse_args()
-    return args.first_file.lower(), args.second_file.lower()
+    return args.first_file.lower(), args.second_file.lower(), args.format
 
 
-path1, path2 = parse_cli_args()
+path1, path2, format = parse_cli_args()
