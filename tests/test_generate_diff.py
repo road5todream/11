@@ -42,6 +42,13 @@ import pytest
             'correct3.txt',
             id="flat_json_file"
         ),
+        pytest.param(
+            'file3.json',
+            'file4.json',
+            'json',
+            'correct4.txt',
+            id="flat_json_file"
+        )
     ]
 )
 def test_gen_diff(file1, file2, format, expected):
