@@ -7,11 +7,12 @@ def parse_cli_args():
     parser.add_argument('first_file', type=str)
     parser.add_argument('second_file', type=str)
     parser.add_argument('-f', '--format',
-                        help='set format of output',
-                        default='stylish', type=str)
+                        default='stylish',
+                        choices=['stylish', 'plain', 'json'],
+                        help='set format of output')
 
     args = parser.parse_args()
     return args.first_file.lower(), args.second_file.lower(), args.format
 
 
-path1, path2, format = parse_cli_args()
+path1, path2, format_name = parse_cli_args()

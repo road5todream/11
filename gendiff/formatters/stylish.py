@@ -2,8 +2,9 @@ def to_str(element, depth):
     if isinstance(element, dict):
         string = ['{']
         for key, value in element.items():
-            string.append('\n' + '  ' * depth + '  ' + str(key) + ': '
-                          + str(to_str(value, depth + 2)))
+            string.append(
+                '\n' + '  ' * depth + '  ' + str(key) + ': ' + str(
+                    to_str(value, depth + 2)))
         string.append('\n' + '  ' * (depth - 1) + '}')
         result = ''.join(string)
         return result
@@ -14,7 +15,7 @@ def to_str(element, depth):
 def new_status(status):
     if status == 'unchanged':
         status = '  '
-    elif status == 'add':
+    elif status == 'added':
         status = '+ '
     else:
         status = '- '
@@ -29,13 +30,17 @@ def stylish(diff, depth=1):
             line.append(stylish(value['value'], depth + 2))
             line.append('  ' * (depth + 1) + '}' + '\n')
         elif value['status'] == 'changed':
-            line.append('  ' * depth + '- ' + str(key) + ': '
-                        + str(to_str(value['old'], depth + 2)) + '\n')
-            line.append('  ' * depth + '+ ' + str(key) + ': '
-                        + str(to_str(value['new'], depth + 2)) + '\n')
+            line.append(
+                '  ' * depth + '- ' + str(key) + ': ' + str(
+                    to_str(value['old'], depth + 2)) + '\n')
+            line.append(
+                '  ' * depth + '+ ' + str(key) + ': ' + str(
+                    to_str(value['new'], depth + 2)) + '\n')
         else:
-            line.append('  ' * depth + new_status(value['status']) + str(key) + ': '
-                        + str(to_str(value['value'], depth + 2)) + '\n')
+            line.append(
+                '  ' * depth + new_status(
+                    value['status']) + str(key) + ': ' + str(
+                    to_str(value['value'], depth + 2)) + '\n')
     result = ''.join(line)
     return result
 

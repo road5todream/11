@@ -22,7 +22,7 @@ def difference(dic1, dic2):
             dic_new[key] = {'status': 'removed',
                             'value': dic1[key]}
         elif key in dic2 and key not in dic1:
-            dic_new[key] = {'status': 'add',
+            dic_new[key] = {'status': 'added',
                             'value': dic2[key]}
         elif isinstance(dic1[key], dict) and isinstance(dic2[key], dict):
             child = difference(dic1[key], dic2[key])
@@ -39,10 +39,10 @@ def difference(dic1, dic2):
 
 
 def generate_diff(path_file1, path_file2, format='stylish'):
-    data1, format1 = prepare_data(path_file1)
-    data2, format2 = prepare_data(path_file2)
-    parc_data1 = parse(data1, format1)
-    parc_data2 = parse(data2, format2)
+    data1, forma1 = prepare_data(path_file1)
+    data2, forma2 = prepare_data(path_file2)
+    parc_data1 = parse(data1, forma1)
+    parc_data2 = parse(data2, forma2)
     diff = difference(normal_values(parc_data1), normal_values(parc_data2))
     diff = formatter(format)(diff)
     return diff
