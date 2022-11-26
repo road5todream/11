@@ -22,3 +22,6 @@ Recursive comparison YAML
 
 flat format
 [![asciicast](https://asciinema.org/a/sTMDDFWa88TcWVLzqYc3mahHf.svg)](https://asciinema.org/a/sTMDDFWa88TcWVLzqYc3mahHf)
+
+Conclusion in JSON
+[![asciicast](https://asciinema.org/a/sSOb0j74F0w7aq7TIdNDwOLBq.svg)](https://asciinema.org/a/sSOb0j74F0w7aq7TIdNDwOLBq)
