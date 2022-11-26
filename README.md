@@ -3,4 +3,4 @@
 <a href="https://codeclimate.com/github/road5todream/python-project-50/maintainability"><img src="https://api.codeclimate.com/v1/badges/483f78919eb9408155ae/maintainability" /></a>
 <a href="https://codeclimate.com/github/road5todream/python-project-50/test_coverage"><img src="https://api.codeclimate.com/v1/badges/483f78919eb9408155ae/test_coverage" /></a>
 
-<a href="https://asciinema.org/a/nEoLcF9PMinmliGx9lG4MV5QP" target="_blank"><img src="https://asciinema.org/a/nEoLcF9PMinmliGx9lG4MV5
+[![asciicast](https://asciinema.org/a/nEoLcF9PMinmliGx9lG4MV5QP.svg)](https://asciinema.org/a/nEoLcF9PMinmliGx9lG4MV5QP)
