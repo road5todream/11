@@ -4,3 +4,5 @@
 <a href="https://codeclimate.com/github/road5todream/python-project-50/test_coverage"><img src="https://api.codeclimate.com/v1/badges/483f78919eb9408155ae/test_coverage" /></a>
 
 [![asciicast](https://asciinema.org/a/nEoLcF9PMinmliGx9lG4MV5QP.svg)](https://asciinema.org/a/nEoLcF9PMinmliGx9lG4MV5QP)
+
+[![asciicast](https://asciinema.org/a/771nwNQp6oWbetwh7bzAU0qsj.svg)](https://asciinema.org/a/771nwNQp6oWbetwh7bzAU0qsj)
