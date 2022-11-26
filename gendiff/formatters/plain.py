@@ -34,7 +34,7 @@ def plain(dictionary, path='', line=[]):
             line.append(forming_line(value['status'], pr, value['old'],
                                      value['new']) + '\n')
     result = ''.join(line)
-    return result
+    return result[0:len(result)-1]
 
 
 def format_plain(dictionary):
