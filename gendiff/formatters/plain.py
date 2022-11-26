@@ -14,7 +14,8 @@ def correct_value(value=''):
         value = '[complex value]'
         return value
     elif value not in ['false', 'true', 'null']:
-        value = "'" + str(value) + "'"
+        if not isinstance(value, int):
+            value = "'" + str(value) + "'"
         return value
     else:
         return str(value)
