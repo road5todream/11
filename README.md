@@ -3,19 +3,4 @@
 <a href="https://codeclimate.com/github/road5todream/python-project-50/maintainability"><img src="https://api.codeclimate.com/v1/badges/483f78919eb9408155ae/maintainability" /></a>
 <a href="https://codeclimate.com/github/road5todream/python-project-50/test_coverage"><img src="https://api.codeclimate.com/v1/badges/483f78919eb9408155ae/test_coverage" /></a>
 
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="asciinema-player.css" />
-</head>
-<body>
-  <div id="player"></div>
-  <script src="asciinema-player.min.js"></script>
-  <script>
-    AsciinemaPlayer.create(
-      '540556.cast',
-      document.getElementById('player'),
-      { cols: 118, rows: 25 }
-    );
-  </script>
-</body>
-</html>
+<script id="asciicast-nEoLcF9PMinmliGx9lG4MV5QP" src="https://asciinema.org/a/nEoLcF9PMinmliGx9lG4MV5QP.js" async></script>
