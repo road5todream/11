@@ -5,7 +5,8 @@ def forming_line(status, path, value1='', value2=''):
     elif status == 'added':
         return arg + status + ' with value: ' + correct_value(value1)
     elif status == 'changed':
-        return arg + 'updated. From ' + correct_value(value1) + ' to ' + correct_value(value2)
+        return arg + 'updated. From ' + correct_value(
+            value1) + ' to ' + correct_value(value2)
 
 
 def correct_value(value=''):

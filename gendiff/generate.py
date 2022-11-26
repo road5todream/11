@@ -31,7 +31,7 @@ def difference(dic1, dic2):
         elif dic1[key] == dic2[key]:
             dic_new[key] = {'status': 'unchanged',
                             'value': dic2[key]}
-        elif dic1[key] != dic2[key]:
+        else:
             dic_new[key] = {'status': 'changed',
                             'old': dic1[key],
                             'new': dic2[key]}
