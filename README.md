@@ -6,7 +6,6 @@
 Project description
 
 calculate differences
-
 calculates differences between two files
 
 Comparison of two flat files JSON
