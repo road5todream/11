@@ -20,7 +20,7 @@ jobs:
       - name: Run tests
         run: make test
       - name: Code Coverage
-        uses: paambaati/codeclimate-action@v1.0.0
+        uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: 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
         with:
