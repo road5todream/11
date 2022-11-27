@@ -1,5 +1,5 @@
-from collections import OrderedDict
 from gendiff.formatters import formatter
+from collections import OrderedDict
 from gendiff.parser import parse
 from gendiff.parser import prepare_data
 
