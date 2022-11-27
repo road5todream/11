@@ -3,10 +3,10 @@ def forming_line(status, path, value1='', value2=''):
     if status == 'removed':
         return arg + status
     elif status == 'added':
-        return arg + status + ' with value: ' + correct_value(value1)
+        return arg + status + ' with value: ' + str(correct_value(value1))
     elif status == 'changed':
-        return arg + 'updated. From ' + correct_value(
-            value1) + ' to ' + correct_value(value2)
+        return arg + 'updated. From ' + str(correct_value(
+            value1)) + ' to ' + str(correct_value(value2))
 
 
 def correct_value(value=''):
@@ -14,7 +14,8 @@ def correct_value(value=''):
         value = '[complex value]'
         return value
     elif value not in ['false', 'true', 'null']:
-        value = "'" + str(value) + "'"
+        if isinstance(value, str):
+            value = "'" + str(value) + "'"
         return value
     else:
         return str(value)
